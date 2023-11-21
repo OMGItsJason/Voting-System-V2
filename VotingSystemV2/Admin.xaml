@@ -1,0 +1,573 @@
+﻿<Window
+    x:Class="VotingSystemV2.Admin"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:VotingSystemV2"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Admin"
+    Width="1820"
+    Height="1000"
+    MinWidth="735"
+    MinHeight="635"
+    MaxWidth="1920"
+    MaxHeight="1020"
+    AllowsTransparency="True"
+    Background="Transparent"
+    ResizeMode="CanResizeWithGrip"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+    mc:Ignorable="d">
+
+    <Window.Resources>
+        <Style x:Key="RoundedButtonStyle" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Border Background="#2E323A" CornerRadius="10">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition Height="50" />
+                <RowDefinition />
+                <RowDefinition Height="50" />
+                <RowDefinition />
+                <RowDefinition Height="50" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="75" />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition Width="75" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock
+                Grid.Column="2"
+                Grid.ColumnSpan="3"
+                Width="506"
+                Margin="243,33,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                FontSize="72"
+                FontWeight="Bold"
+                Foreground="White"
+                Text="Election Result" />
+
+            <Image
+                Grid.Column="1"
+                Width="100"
+                Height="120"
+                Source="/Images/Coat_of_arms_of_the_Philippines.svg.png" />
+
+            <Image
+                Grid.Column="5"
+                Width="100"
+                Height="120"
+                Source="/Images/Coat_of_arms_of_the_Philippines.svg.png" />
+
+            <Image
+                Grid.Row="1"
+                Grid.Column="1"
+                Width="335"
+                Height="255"
+                Source="/Images/Ferdinand_Marcos_Jr._Inauguration_RTVM_(Enhanced).png" />
+
+
+            <Image
+                Grid.Row="1"
+                Grid.Column="2"
+                Width="335"
+                Height="255"
+                Source="/Images/Leni_Robredo_Portrait.png" />
+
+
+            <Image
+                Grid.Row="1"
+                Grid.Column="3"
+                Width="335"
+                Height="200"
+                Source="/Images/220px-Pacquiao_and_Didal_(cropped).jpg" />
+
+
+            <Image
+                Grid.Row="1"
+                Grid.Column="4"
+                Width="335"
+                Height="255"
+                Source="/Images/IskoMorenoOfficialPortrait.jpg" />
+
+            <Image
+                Grid.Row="1"
+                Grid.Column="5"
+                Width="335"
+                Height="255"
+                Source="/Images/Sen._Panfilo_M._Lacson_cropped.jpg" />
+
+            <StackPanel
+                Grid.Row="2"
+                Grid.ColumnSpan="7"
+                Orientation="Horizontal" />
+
+            <Image
+                Grid.Row="3"
+                Grid.Column="1"
+                Width="335"
+                Height="255"
+                Source="/Images/VPSDPortrait_(cropped)_(3).jpg" />
+
+            <Image
+                Grid.Row="3"
+                Grid.Column="2"
+                Width="335"
+                Height="255"
+                Source="/Images/Senkikopangilinan.jpg" />
+
+            <Image
+                Grid.Row="3"
+                Grid.Column="3"
+                Width="335"
+                Height="250"
+                Source="/Images/Tito_Sotto_III_(cropped).jpg" />
+
+            <Image
+                Grid.Row="3"
+                Grid.Column="4"
+                Width="335"
+                Height="200"
+                Source="/Images/Willie_Ong,_2018.jpg" />
+
+            <Image
+                Grid.Row="3"
+                Grid.Column="5"
+                Width="335"
+                Height="230"
+                Source="/Images/Rep._Lito_Atienza,_Jr_(18th_Congress_PH).jpg" />
+
+            <StackPanel
+                Grid.Row="4"
+                Grid.ColumnSpan="7"
+                Orientation="Horizontal" />
+
+            <Image
+                Grid.Row="5"
+                Grid.Column="1"
+                Width="335"
+                Height="325"
+                Source="/Images/Senator_Robinhood_C._Padilla.png" />
+
+            <Image
+                Grid.Row="5"
+                Grid.Column="2"
+                Width="335"
+                Height="190"
+                Source="/Images/Rep._Loren_Legarda_(18th_Congress_PH).jpg" />
+
+            <Image
+                Grid.Row="5"
+                Grid.Column="3"
+                Width="335"
+                Height="200"
+                Source="/Images/Raffy-Tulfo.jpg" />
+
+            <Image
+                Grid.Row="5"
+                Grid.Column="4"
+                Width="335"
+                Height="250"
+                Source="/Images/Senator_Win_Gatchalian,_Chairman_of_the_Senate_Committee_on_Basic_Education,_Arts_and_Culture.jpg" />
+
+            <Image
+                Grid.Row="5"
+                Grid.Column="5"
+                Width="335"
+                Height="230"
+                Source="/Images/Chiz.jpg" />
+
+            <StackPanel
+                Grid.Row="6"
+                Grid.ColumnSpan="7"
+                Orientation="Horizontal" />
+
+            <Button
+                x:Name="LogOutBtn"
+                Grid.Row="7"
+                Grid.Column="5"
+                Width="250"
+                Height="75"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Background="Red"
+                Click="LogOutBtn_Click"
+                Content="Log Out"
+                FontSize="42"
+                FontWeight="Bold"
+                Foreground="White"
+                Style="{StaticResource RoundedButtonStyle}" />
+
+            <TextBlock
+                Grid.Row="2"
+                Grid.Column="1"
+                Margin="20,0,0,0"
+                VerticalAlignment="Center"
+                FontSize="22"
+                FontWeight="Bold"
+                Foreground="White"
+                Text="Bongbong Marcos" />
+
+            <Label
+                x:Name="BMC"
+                Grid.Row="2"
+                Grid.Column="1"
+                Margin="0,0,15,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Content="10000"
+                FontSize="22"
+                FontWeight="Bold"
+                Foreground="White" />
+
+            <TextBlock
+                Grid.Row="2"
+                Grid.Column="2"
+                Margin="30,0,0,0"
+                VerticalAlignment="Center"
+                FontSize="22"
+                FontWeight="Bold"
+                Foreground="White"
+                Text="Leni Robredo" />
+
+            <Label
+                x:Name="LRC"
+                Grid.Row="2"
+                Grid.Column="2"
+                Margin="0,0,15,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Content="10000"
+                FontSize="22"
+                FontWeight="Bold"
+                Foreground="White" />
+
+            <TextBlock
+                Grid.Row="2"
+                Grid.Column="3"
+                Margin="30,0,0,0"
+                VerticalAlignment="Center"
+                FontSize="22"
+                FontWeight="Bold"
+                Foreground="White"
+                Text="Manny Pacquiao" />
+
+            <Label
+                x:Name="MPC"
+                Grid.Row="2"
+                Grid.Column="3"
+                Margin="0,0,15,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Content="10000"
+                FontSize="22"
+                FontWeight="Bold"
+                Foreground="White" />
+
+            <TextBlock
+                Grid.Row="2"
+                Grid.Column="4"
+                Margin="40,0,0,0"
+                VerticalAlignment="Center"
+                FontSize="22"
+                FontWeight="Bold"
+                Foreground="White"
+                Text="Isko Moreno" />
+
+            <Label
+                x:Name="IMC"
+                Grid.Row="2"
+                Grid.Column="4"
+                Margin="0,0,20,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Content="10000"
+                FontSize="22"
+                FontWeight="Bold"
+                Foreground="White" />
+
+            <TextBlock
+                Grid.Row="2"
+                Grid.Column="5"
+                Margin="30,0,0,0"
+                VerticalAlignment="Center"
+                FontSize="22"
+                FontWeight="Bold"
+                Foreground="White"
+                Text="Ping Lacsonn" />
+
+            <Label
+                x:Name="PLC"
+                Grid.Row="2"
+                Grid.Column="5"
+                Margin="0,0,15,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Content="10000"
+                FontSize="22"
+                FontWeight="Bold"
+                Foreground="White" />
+
+            <TextBlock
+                Grid.Row="4"
+                Grid.Column="1"
+                Margin="30,0,0,0"
+                VerticalAlignment="Center"
+                FontSize="22"
+                FontWeight="Bold"
+                Foreground="White"
+                Text="Sarah Duterte" />
+
+            <Label
+                x:Name="SDC"
+                Grid.Row="4"
+                Grid.Column="1"
+                Margin="0,0,15,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Content="10000"
+                FontSize="22"
+                FontWeight="Bold"
+                Foreground="White" />
+
+            <TextBlock
+                Grid.Row="4"
+                Grid.Column="2"
+                Margin="30,0,0,0"
+                VerticalAlignment="Center"
+                FontSize="22"
+                FontWeight="Bold"
+                Foreground="White"
+                Text="Kiko Pangilinan" />
+
+            <Label
+                x:Name="KPC"
+                Grid.Row="4"
+                Grid.Column="2"
+                Margin="0,0,15,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Content="10000"
+                FontSize="22"
+                FontWeight="Bold"
+                Foreground="White" />
+
+            <TextBlock
+                Grid.Row="4"
+                Grid.Column="3"
+                Margin="30,0,0,0"
+                VerticalAlignment="Center"
+                FontSize="22"
+                FontWeight="Bold"
+                Foreground="White"
+                Text="Vicente Tito Sotto" />
+
+            <Label
+                x:Name="VTSC"
+                Grid.Row="4"
+                Grid.Column="3"
+                Margin="0,0,15,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Content="10000"
+                FontSize="22"
+                FontWeight="Bold"
+                Foreground="White" />
+
+            <TextBlock
+                Grid.Row="4"
+                Grid.Column="4"
+                Margin="30,0,0,0"
+                VerticalAlignment="Center"
+                FontSize="22"
+                FontWeight="Bold"
+                Foreground="White"
+                Text="Willie Ong" />
+
+            <Label
+                x:Name="WOC"
+                Grid.Row="4"
+                Grid.Column="4"
+                Margin="0,0,15,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Content="10000"
+                FontSize="22"
+                FontWeight="Bold"
+                Foreground="White" />
+
+            <TextBlock
+                Grid.Row="4"
+                Grid.Column="5"
+                Margin="30,0,0,0"
+                VerticalAlignment="Center"
+                FontSize="22"
+                FontWeight="Bold"
+                Foreground="White"
+                Text="Lito Atienza" />
+
+            <Label
+                x:Name="LAC"
+                Grid.Row="4"
+                Grid.Column="5"
+                Margin="0,0,15,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Content="10000"
+                FontSize="22"
+                FontWeight="Bold"
+                Foreground="White" />
+
+            <TextBlock
+                Grid.Row="6"
+                Grid.Column="1"
+                Margin="30,0,0,0"
+                VerticalAlignment="Center"
+                FontSize="22"
+                FontWeight="Bold"
+                Foreground="White"
+                Text="Robin Padila" />
+
+            <Label
+                x:Name="RPC"
+                Grid.Row="6"
+                Grid.Column="1"
+                Margin="0,0,15,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Content="10000"
+                FontSize="22"
+                FontWeight="Bold"
+                Foreground="White" />
+
+            <TextBlock
+                Grid.Row="6"
+                Grid.Column="2"
+                Margin="30,0,0,0"
+                VerticalAlignment="Center"
+                FontSize="22"
+                FontWeight="Bold"
+                Foreground="White"
+                Text="Loren Legarda" />
+
+            <Label
+                x:Name="LLC"
+                Grid.Row="6"
+                Grid.Column="2"
+                Margin="0,0,15,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Content="10000"
+                FontSize="22"
+                FontWeight="Bold"
+                Foreground="White" />
+
+            <TextBlock
+                Grid.Row="6"
+                Grid.Column="3"
+                Margin="30,0,0,0"
+                VerticalAlignment="Center"
+                FontSize="22"
+                FontWeight="Bold"
+                Foreground="White"
+                Text="Raffy Tulfo" />
+
+            <Label
+                x:Name="RTC"
+                Grid.Row="6"
+                Grid.Column="3"
+                Margin="0,0,15,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Content="10000"
+                FontSize="22"
+                FontWeight="Bold"
+                Foreground="White" />
+
+            <TextBlock
+                Grid.Row="6"
+                Grid.Column="4"
+                Margin="30,0,0,0"
+                VerticalAlignment="Center"
+                FontSize="22"
+                FontWeight="Bold"
+                Foreground="White"
+                Text="Win Gatchalian" />
+
+            <Label
+                x:Name="WGC"
+                Grid.Row="6"
+                Grid.Column="4"
+                Margin="0,0,15,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Content="10000"
+                FontSize="22"
+                FontWeight="Bold"
+                Foreground="White" />
+
+            <TextBlock
+                Grid.Row="6"
+                Grid.Column="5"
+                Margin="30,0,0,0"
+                VerticalAlignment="Center"
+                FontSize="22"
+                FontWeight="Bold"
+                Foreground="White"
+                Text="Chiz Escudero" />
+
+            <Label
+                x:Name="CEC"
+                Grid.Row="6"
+                Grid.Column="5"
+                Margin="0,0,15,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Content="10000"
+                FontSize="22"
+                FontWeight="Bold"
+                Foreground="White" />
+
+            <TextBlock
+                Grid.Row="7"
+                Grid.Column="1"
+                VerticalAlignment="Center"
+                FontSize="52"
+                FontWeight="Bold"
+                Foreground="White"
+                Text="Total Voters :" />
+
+            <Label
+                x:Name="VC"
+                Grid.Row="7"
+                Grid.Column="2"
+                VerticalAlignment="Center"
+                Content="0"
+                FontSize="52"
+                FontWeight="Bold"
+                Foreground="White" />
+
+        </Grid>
+    </Border>
+</Window>
